@@ -90,11 +90,6 @@ App runs on `http://localhost:5173` (Vite default).
 
 ---
 
-## 🔐 Auth
-
-- Login / Register via `/auth` endpoints on the backend.
-- The frontend stores token in `localStorage` and sends it in the `Authorization: Bearer <token>` header via an Axios interceptor.
-
 ---
 
 ## 🧩 API Endpoints used (frontend)
