@@ -1,16 +1,95 @@
-# React + Vite
+# Matches App — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend client for the Matches app — a simple app to browse live sports matches, search and filter by sport/team, and save favorites. Built with React and Vite.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- User Authentication (Login / Register) using JWT
+- Browse live matches with filtering by sport and search by team
+- Add / Remove favorites
+- Persistent auth token in `localStorage` and React Context
+- Responsive UI using Bootstrap / React-Bootstrap
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧭 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- React Router
+- Axios for HTTP requests
+- React Context for auth
+- React-Bootstrap + Bootstrap for UI
+
+---
+
+## 📁 Folder Structure
+
+```
+MatchesFrontend/
+│── public/
+│── src/
+│   ├── api/          # Axios wrappers: apiClient, auth, match, favorite
+│   ├── components/   # Reusable UI components (MatchCard, Navbar)
+│   ├── context/      # Auth context
+│   ├── pages/        # Pages: Matches, Favorites, Login, Register
+│   ├── App.jsx       # Main app component
+│   └── main.jsx      # App entry
+│── package.json
+```
+
+---
+
+## 🔧 Local Setup
+
+1. Install dependencies
+
+```bash
+git clone https://github.com/sudheeshna86/MatchesFrontend
+cd MatchesFrontend
+npm install
+```
+
+2. Update API base URL 
+
+- The default base URL is configured at `src/api/apiClient.js` (currently points to `https://matchesbackend.onrender.com`).
+- To use a local backend, change `baseURL` to `http://localhost:5000` or update the code to read `import.meta.env.VITE_API_URL`.
+
+3. Start dev server
+
+```bash
+npm run dev
+```
+
+App runs on `http://localhost:5173` (Vite default).
+
+---
+
+## 🧪 Scripts
+
+- `npm run dev` — start dev server
+- `npm run build` — production build
+- `npm run preview` — preview production build
+- `npm run lint` — run ESLint
+
+---
+
+## 🔐 Auth
+
+- Login / Register via `/auth` endpoints on the backend.
+- The frontend stores token in `localStorage` and sends it in the `Authorization: Bearer <token>` header via an Axios interceptor.
+
+---
+
+## 🧩 API Endpoints used (frontend)
+
+- `POST /auth/register` — register user
+- `POST /auth/login` — login user (returns token)
+- `GET /matches` — list matches (optional query: `sport`, `search`)
+- `GET /favorites` — get user favorites (auth required)
+- `POST /favorites/:matchId` — add favorite (auth required)
+- `DELETE /favorites/:matchId` — remove favorite (auth required)
+
+---
+
