@@ -103,6 +103,15 @@ App runs on `http://localhost:5173` (Vite default).
 
 ---
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5151c0b6-9d7c-4097-8960-281bf53aaf2a" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/225cee44-56fd-484c-af9f-efa24a10877a" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/202b8a39-0693-4b02-b61f-134391832eff" />
+
+
+
+
 
 
 
