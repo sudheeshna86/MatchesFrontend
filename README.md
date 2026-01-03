@@ -4,7 +4,22 @@ This repository contains the frontend client for the Matches app — a simple ap
 
 ---
 
-## 🚀 Features
+##  Screen Recording Vedio
+
+https://drive.google.com/file/d/1rIQBnmmbVs5Bx4FHSHHjFEW810OKelR0/view?usp=sharing
+
+##  Frontend Live:
+
+https://matches-frontend-nu.vercel.app/
+
+## Backend Repo(Please see backend repository for backend code)
+
+Repo Link : https://github.com/sudheeshna86/MatchesBackend.git 
+Backend Live : https://matchesbackend.onrender.com
+---
+---
+
+##  Features
 
 - User Authentication (Login / Register) using JWT
 - Browse live matches with filtering by sport and search by team
@@ -14,7 +29,7 @@ This repository contains the frontend client for the Matches app — a simple ap
 
 ---
 
-## 🧭 Tech Stack
+##  Tech Stack
 
 - React (Vite)
 - React Router
@@ -24,7 +39,7 @@ This repository contains the frontend client for the Matches app — a simple ap
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 
 ```
 MatchesFrontend/
@@ -41,7 +56,7 @@ MatchesFrontend/
 
 ---
 
-## 🔧 Local Setup
+##  Local Setup
 
 1. Install dependencies
 
@@ -92,4 +107,8 @@ App runs on `http://localhost:5173` (Vite default).
 - `DELETE /favorites/:matchId` — remove favorite (auth required)
 
 ---
+
+
+
+
 
